@@ -615,10 +615,10 @@ const ViewPost = () => {
                     <table class="table">
   <thead>
     <tr>
-        <th scope="col">#</th>
-      <th scope="col">Post no</th>
-      <th scope="col">Post pic</th>
-      <th scope="col">caption</th>
+        <th scope="col">User ID</th>
+      <th scope="col">ID</th>
+      <th scope="col">Title</th>
+      <th scope="col">Body</th>
     </tr>
   </thead>
   <tbody>
