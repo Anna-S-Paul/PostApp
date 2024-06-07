@@ -612,28 +612,32 @@ const ViewPost = () => {
             <div className="container">
                 <div className="row">
                     <div className="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
-                        <div className="row g-3">
-                            {
-                                data.map(
-                                    (value,index)=>{
-                                        return <div className="col col-12 col-sm-6 col-md-6 col-lg-4 col-xl-4 col-xxl-4">
-                                        <div class="card">
-                                            <img src="https://i.insider.com/64c3a62e048ff200190c91ca?width=700" class="card-img-top" alt="..."></img>
-                                            <div class="card-body">
-                                                <h5 class="card-title">{value.userId}</h5>
-                                                <h5 class="card-title">{value.id}</h5>
-                                                <h5 class="card-title">{value.title}</h5>
-                                                <p class="card-text">{value.body}</p>
-                                                <a href="#" class="btn btn-primary">Post</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    }
-                                )
-
-                            }
-                        </div>
-                    </div>
+                    <table class="table">
+  <thead>
+    <tr>
+        <th scope="col">#</th>
+      <th scope="col">Post no</th>
+      <th scope="col">Post pic</th>
+      <th scope="col">caption</th>
+    </tr>
+  </thead>
+  <tbody>
+    {
+        data.map(
+            (value,index)=>{
+                return <tr>
+                <td>{value.userId}</td>
+                <td>{value.id}</td>
+                <td>{value.title}</td>
+                <td>{value.body}</td>
+              </tr>
+            }
+        )
+    }
+    
+  </tbody>
+</table>
+                    </div>   
                 </div>
             </div>
         </div >
